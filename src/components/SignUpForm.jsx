@@ -23,7 +23,7 @@ export default function SignUpForm() {
       const result = await response.json();
       function setToken() {
         console.log(result.token);
-        return result.token;
+        return setToken(result.token);
       }
 
       console.log("data--->", result.token);
